@@ -1,4 +1,4 @@
-@import "../style/mixins.scss";
+@use "../style/_mixins.scss" as mixins;
 
 .pricing {
     padding-block: 5rem;
@@ -7,7 +7,7 @@
     background-size: 60%;
     background-repeat: no-repeat;
 
-    @include respond(tab-port){
+    @include mixins.respond(tab-port) { // ✅ Fixed mixin reference
         background: none;
     }
 
@@ -32,12 +32,12 @@
         border: 1px solid var(--black-olive);
     }
 
-    img{
+    img {
         margin-inline: auto;
         width: 5rem;
     }
 
-    h3{
+    h3 {
         margin-top: 1.5rem;
         font-size: 1.6rem;
         font-weight: 400;
@@ -51,7 +51,5 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-text-fill-color: transparent;
     }
-
 }

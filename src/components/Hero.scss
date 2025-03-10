@@ -1,10 +1,8 @@
-@import "../style/mixins.scss";
-
+@use "../style/_mixins.scss" as mixins;
 
 .hero {
     background-color: var(--black);
     padding-block: 5rem;
-
 
     &__container {
         display: grid;
@@ -16,7 +14,7 @@
         background-size: 50%;
         background-repeat: no-repeat;
 
-        @include respond(tab-port){
+        @include mixins.respond(tab-port) { // ✅ Fixed mixin reference
             grid-template-columns: 1fr;
             background: none;
         }
@@ -25,7 +23,7 @@
     &__left img {
         width: 90%;
 
-        @include respond(tab-port) {
+        @include mixins.respond(tab-port) {  // ✅ Fixed mixin reference
             width: 80%;
             margin-inline: auto;
         }
@@ -38,10 +36,9 @@
         font-weight: 600;
         line-height: 1.2;
 
-        @include respond(phone) {
-            font-size:  2.4rem;
+        @include mixins.respond(phone) {  // ✅ Fixed mixin reference
+            font-size: 2.4rem;
         }
-
     }
 
     p {

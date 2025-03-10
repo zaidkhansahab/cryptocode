@@ -1,4 +1,4 @@
-@import "../style/mixins.scss";
+@use "../style/_mixins.scss" as mixins;
 
 .footer {
     padding-block: 5rem;
@@ -9,17 +9,17 @@
         line-height: 1.2;
         text-transform: capitalize;
 
-        @include respond(phone){
+        @include mixins.respond(phone) {
             font-size: 2rem;
         }
     }
 
-    p{
+    p {
         margin-block: 1rem 2rem;
         width: 70%;
         margin-inline: auto;
 
-        @include respond(phone){
+        @include mixins.respond(phone) {
             width: 100%;
         }
     }
@@ -34,10 +34,11 @@
         gap: 8rem;
         border: 2px solid var(--black-olive);
 
-        @include respond(phone) {
+        @include mixins.respond(phone) {
             gap: 1rem;
         }
     }
+
     input {
        background: transparent; 
        border: none;

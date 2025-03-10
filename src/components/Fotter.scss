@@ -1,7 +1,6 @@
-@import "../style/mixins.scss";
+@use "../style/_mixins.scss" as mixins;
 
-
-.fotter{
+.fotter {
     padding-block: 5rem;
 
     &__container {
@@ -13,17 +12,16 @@
     img {
         width: 5rem;
         margin-bottom: 1rem;
-    
     }
 
-    h3{
+    h3 {
         font-weight: 400;
         font-size: 1.3rem;
         margin-bottom: 0.8rem;
     }
 
     &__col:not(:last-child) {
-        a{
+        a {
             color: var(--spanish-gray);
             text-transform: uppercase;
             display: block;
@@ -40,7 +38,7 @@
     &__col:not(:first-child) {
         margin-inline: auto;
 
-        @include respond(phone) {
+        @include mixins.respond(phone) {  // ✅ Fixed mixin reference
             margin: 0;
         }
     }
@@ -51,7 +49,7 @@
         flex-wrap: wrap;
         gap: 0.5rem;
     }
-     
+
     &__icon {
         padding: 0.7rem;
         background-color: var(--black);
@@ -60,10 +58,9 @@
         border-radius: 0.5rem;
         border: 1px solid var(--black-olive);
         color: var(--cultured);
-        transition: all  0.3s ease;
+        transition: all 0.3s ease;
 
-
-        &:hover{
+        &:hover {
             background-color: var(--gradient);
         }
     }
