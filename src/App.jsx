@@ -6,7 +6,7 @@ import { Hero } from './components/Hero'
 import { Navbar } from './components/Navbar'
 import { Pricing } from './components/Pricing'
 import { Status } from './components/Status'
-import { Companies } from './components/companies.jsx';
+import { Companies } from './components/Companies.jsx';
 
 function App() {
   
